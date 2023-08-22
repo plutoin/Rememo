@@ -7,7 +7,7 @@ import {
   TagNotes,
   ErrorPage,
 } from "./pages";
-import { Sidebar } from "./layout";
+import { Navbar, Sidebar } from "./layout";
 
 import "./App.css";
 
@@ -17,6 +17,7 @@ function App() {
       <BrowserRouter>
         <Sidebar />
         <div className="app__container">
+          <Navbar />
           <Routes>
             <Route path="/" element={<AllNotes />} />
             <Route path="/archive" element={<ArchiveNotes />} />
