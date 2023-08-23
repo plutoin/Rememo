@@ -1,4 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import { useAppSelector } from "./hooks/redux";
 
 import {
   AllNotes,
@@ -8,12 +12,22 @@ import {
   ErrorPage,
 } from "./pages";
 import { Navbar, Sidebar } from "./layout";
+import TagsModal from "./components/Modal/TagsModal/TagsModal";
 
 import "./App.css";
 
 function App() {
+  const { viewEditTagsModal } = useAppSelector((state) => state.modal);
+
   return (
     <div className="App">
+      {viewEditTagsModal && <TagsModal type="edit" />}
+      <ToastContainer
+        position="bottom-right"
+        theme="light"
+        pauseOnHover
+        autoClose={1500}
+      />
       <BrowserRouter>
         <Sidebar />
         <div className="app__container">
