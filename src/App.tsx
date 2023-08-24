@@ -12,16 +12,22 @@ import {
   ErrorPage,
 } from "./pages";
 import { Navbar, Sidebar } from "./layout";
+
+import { CreateNoteModal } from "./components";
 import TagsModal from "./components/Modal/TagsModal/TagsModal";
 
 import "./App.css";
 
 function App() {
-  const { viewEditTagsModal } = useAppSelector((state) => state.modal);
+  const { viewCreateNoteModal, viewEditTagsModal } = useAppSelector(
+    (state) => state.modal
+  );
 
   return (
     <div className="app">
       {viewEditTagsModal && <TagsModal type="edit" />}
+      {viewCreateNoteModal && <CreateNoteModal />}
+
       <ToastContainer
         position="bottom-right"
         theme="light"

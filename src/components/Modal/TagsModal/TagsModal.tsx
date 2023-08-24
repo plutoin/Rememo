@@ -8,16 +8,23 @@ import { toggleTagsModal } from "../../../store/modal/modalSlice";
 
 import getStandardName from "../../../utils/getStandardName";
 
-import { FaTimes } from "react-icons/fa";
+import { FaMinus, FaPlus, FaTimes } from "react-icons/fa";
 
 import { FixedContainer, DeleteBox } from "../Modal.styles";
 import { Box, StyledInput, TagsBox } from "./TagsModal.styles";
+import { Tag } from "../../../types/tag";
 
 interface TagsModalProps {
   type: string;
+  addedTags?: Tag[];
+  handleTags?: (tag: string, type: string) => void;
 }
 
-export default function TagsModal({ type }: TagsModalProps) {
+export default function TagsModal({
+  type,
+  addedTags,
+  handleTags,
+}: TagsModalProps) {
   const dispatch = useAppDispatch();
   const [inputText, setInputText] = useState<string>("");
 
@@ -66,9 +73,19 @@ export default function TagsModal({ type }: TagsModalProps) {
           {tagsList.map(({ tag, id }) => (
             <li key={id}>
               <div className="eidtTags__tag">{getStandardName(tag)}</div>
-              <DeleteBox onClick={() => deleteTagsHandler(tag, id)}>
-                <FaTimes />
-              </DeleteBox>
+              {type === "edit" ? (
+                <DeleteBox onClick={() => deleteTagsHandler(tag, id)}>
+                  <FaTimes />
+                </DeleteBox>
+              ) : <DeleteBox onClick={() => deleteTagsHandler(tag, id)}>
+                  {addedTags.find(
+                    (addedTag: Tag) => addedTag.tag === tag.toLowerCase()
+                  )}
+                </DeleteBox> ? (
+                <FaMinus onClick={() => handleTags!(tag, "remove")} />
+              ) : (
+                <FaPlus onClick={() => handleTags!(tag, "add")} />
+              )}
             </li>
           ))}
         </TagsBox>
