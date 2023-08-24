@@ -26,7 +26,6 @@ export const DeleteBox = styled.div`
     color: rgba(0, 0, 0, 0.5);
     transition: 250ms transform ease-in-out, 200ms color ease-in-out;
     &:hover {
-      transform: scale(1.15);
       color: rgba(0, 0, 0, 0.8);
     }
   }

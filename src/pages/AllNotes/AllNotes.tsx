@@ -45,7 +45,7 @@ export default function AllNotes() {
                 type="text"
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
-                placeholder="노트의 제목을 입력해 주세요"
+                placeholder="Enter a note title"
               />
             </InputBox>
 

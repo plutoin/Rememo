@@ -19,7 +19,7 @@ export const TopBox = styled.div`
   align-items: center;
   .createNote__title {
     font-weight: 600;
-    font-size: clamp(1.4rem, 3vw, 1.6rem);
+    font-size: clamp(1.4rem, 3vw, 1rem);
   }
   .createNote__close-btn {
     svg {
@@ -30,14 +30,17 @@ export const TopBox = styled.div`
 
 export const StyledInput = styled.input`
   width: 100%;
-  height: 40px;
+  margin: 20px 0 10px;
+  padding: 10px 0;
   user-select: none;
   outline: none;
   border: 1px solid rgba(0, 0, 0, 0.2);
   text-indent: 15px;
-  margin: 20px 0 10px;
-  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-size: clamp(1rem, 2vw, 1rem);
   transition: 250ms box-shadow ease-in;
+  &::placeholder {
+    font-size: 16px;
+  }
 `;
 
 export const AddedTagsBox = styled.div`

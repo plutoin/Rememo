@@ -103,18 +103,20 @@ const CreateNoteModal = () => {
       )}
       <Box>
         <TopBox>
-          <div className="createNote_title">Add Note</div>
+          <div className="createNote__title">Add Note</div>
           <DeleteBox
             className="createNote__close-btn"
             onClick={closeCreateNoteModal}
-          ></DeleteBox>
+          >
+            <FaTimes />
+          </DeleteBox>
         </TopBox>
 
         <StyledInput
           type="text"
           value={noteTitle}
           name="title"
-          placeholder="제목..."
+          placeholder="제목"
           onChange={(e) => setNoteTitle(e.target.value)}
         />
 
