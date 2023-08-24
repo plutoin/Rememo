@@ -40,7 +40,7 @@ export default function NoteCard({ note, type }: NoteCardProps) {
               className="noteCard__pin"
               onClick={() => dispatch(setPinnedNotes)}
             >
-              <BsFillPinFill style={{ color: isPinned ? "red" : "" }} />
+              <BsFillPinFill style={{ color: isPinned ? "salmon" : "" }} />
             </NotesIconBox>
           )}
         </div>

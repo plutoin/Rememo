@@ -75,15 +75,15 @@ export const OptionsBox = styled.div`
   margin: 15px 0 25px;
 
   select {
-    font-size: clamp(14px, 1.5vw, 1rem);
+    font-size: clamp(14px, 1.5vw, 0.5rem);
     padding: 5px 10px;
     user-select: none;
     outline: none;
     border: none;
-    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5);
-    border-radius: 3px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
   }
   label {
-    font-size: clamp(14px, 1.5vw, 1rem);
+    font-size: clamp(14px, 1.5vw, 0.5rem);
   }
 `;

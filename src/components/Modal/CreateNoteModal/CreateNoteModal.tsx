@@ -103,7 +103,7 @@ const CreateNoteModal = () => {
       )}
       <Box>
         <TopBox>
-          <div className="createNote_title">노트 생성하기</div>
+          <div className="createNote_title">Add Note</div>
           <DeleteBox
             className="createNote__close-btn"
             onClick={closeCreateNoteModal}
@@ -152,10 +152,10 @@ const CreateNoteModal = () => {
               onChange={(e) => setNoteColor(e.target.value)}
             >
               <option value="">White</option>
-              <option value="#ffcccc">Red</option>
-              <option value="#ccffcc">Green</option>
-              <option value="#cce0ff">Blue</option>
-              <option value="#ffffcc">Yellow</option>
+              <option value="#F9F5F6">Red</option>
+              <option value="#E1ECC8">Green</option>
+              <option value="#E3F4F4">Blue</option>
+              <option value="#FEFAE0">Yellow</option>
             </select>
           </div>
 
@@ -175,10 +175,10 @@ const CreateNoteModal = () => {
         <div className="createNote__create-btn">
           <ButtonFill onClick={createNoteHandler}>
             {editNote ? (
-              <span>저장하기</span>
+              <span>Save</span>
             ) : (
               <>
-                <FaPlus /> <span>생성하기</span>
+                <FaPlus /> <span>Add</span>
               </>
             )}
           </ButtonFill>

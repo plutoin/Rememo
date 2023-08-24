@@ -4,7 +4,6 @@ export const Card = styled.div`
   width: clamp(250px, 100%, 265px);
   height: 220px;
   border-radius: 8px;
-  box-shadow: 0px 1.5px 3px 0px rgba(0, 0, 0, 0.5);
   padding: 20px;
   margin: 0px 35px 35px 0px;
   background-color: white;
@@ -12,7 +11,6 @@ export const Card = styled.div`
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.6);
   }
 
   @media screen and (max-width: 600px) {

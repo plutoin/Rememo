@@ -5,7 +5,7 @@ export const StyledNav = styled.div`
   height: 80px;
   display: flex;
   align-items: center;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.12);
+  border-bottom: 2px solid #f1f3f4;
   padding: 0 30px;
 
   .nav__menu {

@@ -35,7 +35,7 @@ export default function AllNotes() {
                 onClick={() => dispatch(toggleFiltersModal(true))}
                 className="nav__btn"
               >
-                <span>정렬</span>
+                <span>Filter</span>
               </ButtonOutline>
             </div>
           </TopBox>

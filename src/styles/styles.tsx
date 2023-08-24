@@ -22,18 +22,23 @@ export const EmptyMsgBox = styled.div`
 export const ButtonFill = styled.button`
   padding: 6px 20px;
   border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  border: none;
+  background-color: var(--primary-color);
   transition: 250ms background-color ease-in-out;
+  cursor: pointer;
+
   span {
     font-weight: 500;
-    font-size: clamp(15px, 3.5vw, 1.2rem);
+    font-size: clamp(15px, 3.5vw, 0.7rem);
   }
-  background-color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+
+  svg {
+    display: inline-block;
+    margin-bottom: -1px;
+  }
 
   &:hover {
-    background-color: rgb(253, 239, 195, 0.5);
+    background-color: #ffe4a7;
   }
 
   @media screen and (max-width: 600px) {
@@ -42,18 +47,16 @@ export const ButtonFill = styled.button`
 `;
 
 export const ButtonOutline = styled.button`
-  padding: 6px 20px;
+  padding: 5px 20px;
   border-radius: 5px;
-  cursor: pointer;
   background-color: rgba(0, 0, 0, 0.05);
-  box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.2);
   transition: 250ms background-color ease-in-out;
   white-space: nowrap;
+  cursor: pointer;
 
   span {
     font-weight: 500;
-    font-size: clamp(15px, 3.5vw, 1.2rem);
-    margin-left: 5px;
+    font-size: clamp(15px, 3.5vw, 0.8rem);
   }
   border: none;
 
@@ -78,7 +81,7 @@ export const NotesIconBox = styled.span`
 
   &:hover {
     svg {
-      color: var(--primary-color);
+      color: black;
     }
   }
 `;

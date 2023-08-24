@@ -18,14 +18,9 @@ export const InputBox = styled.div`
   height: 33px;
   display: flex;
   align-items: center;
-  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   transition: 300ms box-shadow ease-in;
   margin-bottom: 16px;
-
-  &:hover {
-    box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.4);
-  }
 
   input {
     width: 100%;
@@ -34,6 +29,7 @@ export const InputBox = styled.div`
     border: none;
     outline: none;
     border-radius: 5px;
+    background-color: #f1f3f4;
 
     &::placeholder {
       color: rgba(0, 0, 0, 0.3);
