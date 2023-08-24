@@ -36,7 +36,7 @@ export default function AllNotes() {
         />
       )}
       {mainNotes.length === 0 ? (
-        <EmptyMsgBox>노트가 없습니다.</EmptyMsgBox>
+        <EmptyMsgBox>NO NOTES</EmptyMsgBox>
       ) : (
         <>
           <TopBox>

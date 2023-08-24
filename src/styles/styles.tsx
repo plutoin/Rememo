@@ -15,8 +15,9 @@ export const NotesContainer = styled.div`
 
 export const EmptyMsgBox = styled.div`
   text-align: center;
-  font-size: clamp(1.2rem, 2vw, 1.3rem);
+  font-size: clamp(1.2rem, 2vw, 1rem);
   font-weight: 500;
+  color: #c4c4c4;
 `;
 
 export const ButtonFill = styled.button`

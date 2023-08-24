@@ -72,19 +72,21 @@ export default function TagsModal({
         <TagsBox>
           {tagsList.map(({ tag, id }) => (
             <li key={id}>
-              <div className="eidtTags__tag">{getStandardName(tag)}</div>
+              <div className="editTags__tag">{getStandardName(tag)}</div>
               {type === "edit" ? (
                 <DeleteBox onClick={() => deleteTagsHandler(tag, id)}>
                   <FaTimes />
                 </DeleteBox>
-              ) : <DeleteBox onClick={() => deleteTagsHandler(tag, id)}>
-                  {addedTags.find(
-                    (addedTag: Tag) => addedTag.tag === tag.toLowerCase()
-                  )}
-                </DeleteBox> ? (
-                <FaMinus onClick={() => handleTags!(tag, "remove")} />
               ) : (
-                <FaPlus onClick={() => handleTags!(tag, "add")} />
+                <DeleteBox>
+                  {addedTags?.find(
+                    (addedTag: Tag) => addedTag.tag === tag.toLowerCase()
+                  ) ? (
+                    <FaMinus onClick={() => handleTags!(tag, "remove")} />
+                  ) : (
+                    <FaPlus onClick={() => handleTags!(tag, "add")} />
+                  )}
+                </DeleteBox>
               )}
             </li>
           ))}
